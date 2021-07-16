@@ -1,0 +1,10 @@
+datasets
+transformers
+deepspeed
+tensorboardX
+psutil
+tensorboard>=1.14.0
+scipy>=1.4.1
+regex
+GitPython
+ray[tune]
