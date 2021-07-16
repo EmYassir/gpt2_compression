@@ -729,7 +729,7 @@ def main():
     args.output_mode = output_modes[args.task_name]
     label_list = processor.get_labels()
     num_labels = len(label_list)
-    logger.info(f'### num labels = {num_labels}')
+    #logger.info(f'### num labels = {num_labels}')
 
     # Do all the stuff you want only first process to do
     # e.g. make sure only the first process will download model & vocab
@@ -758,7 +758,7 @@ def main():
         config.num_spans = task_spans[args.task_name]
         logger.info(f'### config.num_spans = {config.num_spans}')
 
-    logger.info(f'############## Config is {config}\r\n')
+    #logger.info(f'############## Config is {config}\r\n')
     #reference = model_class.from_pretrained(args.model_name_or_path)
     #ref_state_dict = reference.state_dict()
     #logger.info(f'############## Size of transformer.wte.weight == {ref_state_dict["transformer.wpte.weight"]}')
@@ -767,7 +767,7 @@ def main():
         args.model_name_or_path,
         from_tf=bool(".ckpt" in args.model_name_or_path),
         config=config,
-        #cache_dir=args.cache_dir if args.cache_dir else None,
+        cache_dir=args.cache_dir if args.cache_dir else None,
     )
     if args.local_rank == 0:
         torch.distributed.barrier()  # Make sure only the first process in distributed training will download model & vocab
