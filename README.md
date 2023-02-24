@@ -1,5 +1,5 @@
-# GPT-2 Experiments*
-This folder contains the original code used to train Distil* as well as examples showcasing how to use DistilGPT2. It is mainly taken and adapted from the [HuggingFace library](https://github.com/huggingface/transformers/tree/master/examples).
+# GPT-2 Experiments
+This folder contains the original code used to produce the results of the paper [A Short Study on Compressing Decoder-Based Language Models](https://arxiv.org/abs/2110.08460v1) as well as examples showcasing how to use DistilGPT2. It is mainly taken and adapted from the [HuggingFace library](https://github.com/huggingface/transformers/tree/master/examples).
 
 ## Setup
 This part of the library has only be tested with `Python3.8+`, `Pytorch 1.7.1` and `CUDA 10.1`. `Pytorch 1.7.1` can be installed using the following command:
@@ -65,4 +65,18 @@ Evaluation scripts below provide examples to be inspired of:
 - evaluate.sh
 - evaluate_deepspeed.sh
 
-Again, paths/variables should be adapted according to the situation.
+### E. Citation
+
+```
+@misc{https://doi.org/10.48550/arxiv.2110.08460,
+  doi = {10.48550/ARXIV.2110.08460},
+  url = {https://arxiv.org/abs/2110.08460},
+  author = {Li, Tianda and Mesbahi, Yassir El and Kobyzev, Ivan and Rashid, Ahmad and Mahmud, Atif and Anchuri, Nithin and Hajimolahoseini, Habib and Liu, Yang and Rezagholizadeh, Mehdi},
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {A Short Study on Compressing Decoder-Based Language Models},
+  publisher = {arXiv},
+  year = {2021},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+
+```
